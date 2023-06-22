@@ -1,36 +1,40 @@
 import Foundation
 
-struct CardID: Hashable, Equatable{
-    let value: Int
-    init(_ value: Int) {
-        self.value = value
-    }
-}
+//struct CardID: Hashable, Equatable{
+//    let value: Int
+//    init(_ value: Int) {
+//        self.value = value
+//    }
+//}
 
 struct Card: Hashable, Equatable {
-    
+
     func hash(into hasher: inout Hasher) {
-        hasher.combine(self.identifier)
+        hasher.combine(self.emojiIdentifier)
     }
     static func == (lhs: Card, rhs: Card) -> Bool {
-        return lhs.identifier == rhs.identifier
+        return lhs.emojiIdentifier == rhs.emojiIdentifier
     }
-    
-    // value type = struct get copied but created after modification
-    // reference type = class pointer
 
     var isFaceUp = false
     var isMatched = false
-    private(set) var identifier: Int
+    var emojiIdentifier: Int
+    private(set) var uniqueIdentifier: Int
+
+    private static var emojiIdentifierFactory = 0
+    private static var uniqueIdentifierFactory = 0
     
 
-    private static var identifierFactory = 0
-
-    private static func getUniqueIdentifier() -> Int {
-        identifierFactory += 1
-        return identifierFactory
+    static func getEmojiIdentifier() -> Int {
+        emojiIdentifierFactory += 1
+        return emojiIdentifierFactory
+    }
+    static func getUniqueIdentifier() -> Int {
+        uniqueIdentifierFactory += 1
+        return uniqueIdentifierFactory
     }
     init() {
-        self.identifier = Card.getUniqueIdentifier()
+        self.emojiIdentifier = Card.getEmojiIdentifier()
+        self.uniqueIdentifier = Card.getUniqueIdentifier()
     }
 }

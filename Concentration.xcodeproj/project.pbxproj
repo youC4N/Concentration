@@ -29,6 +29,7 @@
 		8578FE5F2A2CDA47009FAA74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8578FE622A2CDA47009FAA74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8578FE642A2CDA47009FAA74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		859983F52A44930E00A5E10E /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		85DA24DE2A3B57C800AEEDDD /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +70,7 @@
 				8578FE5C2A2CDA45009FAA74 /* Main.storyboard */,
 				8578FE6A2A2CDA58009FAA74 /* Supporting Files */,
 				8578FE642A2CDA47009FAA74 /* Info.plist */,
+				859983F52A44930E00A5E10E /* .gitignore */,
 			);
 			path = Concentration;
 			sourceTree = "<group>";
